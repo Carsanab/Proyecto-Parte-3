@@ -1,0 +1,34 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+SE PARTE DE NUESTRO EQUIPO DE PROFESIONALES DE
+
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+CS Logistics
+
+
+{% endblock %}
+
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    
+        {{MiFormulario.as_table}}
+    
+    </table>
+    
+    <input type="submit" value="REGISTRAR">
+    
+    </form> 
+   
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+REGÍSTRATE COMO UN NUEVO
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+CLIENTE
+
+{% endblock %}
+
+<!--Reservado para el formulario-->
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    
+        {{MiFormulario.as_table}}
+    
+    </table>
+    
+    <input type="submit" value="REGISTRAR">
+    
+    </form> 
+   
+{% endblock %}
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Nuevo Proveedor</title>
+</head>
+<body>
+    
+<form action="" method="POST"> {% csrf_token %}
+<table>
+
+    {{MiFormulario.as_table}}
+
+</table>
+
+<input type="submit" value="REGISTRAR">
+
+</form> 
+
+
+</body>
+</html> 

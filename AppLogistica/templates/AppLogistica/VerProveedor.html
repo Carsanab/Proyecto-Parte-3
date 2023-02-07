@@ -1,0 +1,43 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+AQUÍ PUEDES VER LOS
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+PROVEEDORES
+
+{% endblock %}
+
+<!--Reservado para el formulario-->
+{% block boton %}
+     <ol>  
+    <a href="{% url 'proveedornuevo' %}" class="nav-item nav-link">REGISTRAR NUEVO PROVEEDOR</a>
+
+     </ol>
+{% endblock %}
+
+<!--Reservado para el listado de registrados-->
+{% block Listado %}
+
+    <ol>
+        <br>
+        {% for x in todos %}
+        RAZÓN SOCIAL: 
+        {{x.RazonSocial}} <br>
+        CUIT: 
+        {{x.Cuit}}<br>
+
+        -------------------------<br>
+    
+        {% endfor %}
+    </ol>
+   
+{% endblock %}

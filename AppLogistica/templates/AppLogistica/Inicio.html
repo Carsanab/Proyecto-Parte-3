@@ -1,0 +1,46 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+BIENVENIDOS A
+
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+CS Logistics
+
+
+{% endblock %}
+
+<!--Menú inicial-->
+{% block menu %} 
+<ol>
+<h5>BÚSQUEDA DE PROVEEDORES: 
+    <!--<select name="Opciones" id="Opciones">
+    <option value="PROVEEDORES">PROVEEDORES</option>
+    <option value="UNIDADES">UNIDADES</option>
+    <option value="CLIENTES">CLIENTES</option>-->
+    
+  </select> </h5>
+   
+  <form href="{% url 'Resultados' %}" method="GET">
+
+    <input type="text" name="RazonSocial" >
+    <input type="submit" value="BUSCAR">
+   </form>
+  
+  </ol>
+{% endblock %}
+
+<!--Reservado para la búsqueda-->
+{% block buscar %}
+
+
+
+{% endblock %}    

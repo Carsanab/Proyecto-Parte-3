@@ -1,0 +1,35 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+REGISTRA UNA NUEVA
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+UNIDAD
+
+{% endblock %}
+
+<!--Reservado para el formulario-->
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    
+        {{MiFormulario.as_table}}
+    
+    </table>
+    
+    <input type="submit" value="REGISTRAR">
+    
+    </form> 
+   
+{% endblock %}
+
+

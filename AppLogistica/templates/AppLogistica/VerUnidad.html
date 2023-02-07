@@ -1,0 +1,67 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+AQUÍ SE MUESTRAN LAS
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+UNIDADES
+
+{% endblock %}
+
+<!--Reservado para el formulario-->
+{% block boton %}
+     <ol>  
+    <a href="{% url 'unidadnueva' %}" class="nav-item nav-link">REGISTRAR NUEVA UNIDAD</a>
+    </ol>
+{% endblock %}
+
+<!--Reservado para el listado de registrados-->
+{% block Listado %}
+
+    <ol>
+        <br>
+        {% for x in todos %}
+        PATENTE: 
+        {{x.Patente}} <br>
+        TIPO DE UNIDAD: 
+        {{x.TipoUnidad}}<br>
+
+        -------------------------<br>
+    
+        {% endfor %}
+    </ol>
+   
+{% endblock %}
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Unidades</title>
+</head>
+<body>
+    <ol>
+    {% for x in todos %}
+
+    {{x.Patente}}
+    {{x.TipoUnidad}}<br>
+    {% endfor %}
+    </ol>
+
+</body>
+</html>

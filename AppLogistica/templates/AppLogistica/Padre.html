@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Plataforma logística</title>
+    
+
+    
+    <link href="{% static 'AppLogistica/css/style.css' %}" rel="stylesheet"> 
+</head>
+
+<body>
+    
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="{% url 'inicio' %}" class="navbar-brand ml-lg-3" >
+            <img class="img-fluid w-100" src="{% static 'AppLogistica/img/LogoProyecto.png'%}" alt=""> 
+                
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div class="navbar-nav m-auto py-0">
+                    <a href="{% url 'proveedores' %}" class="nav-item nav-link">PROVEEDORES</a>
+                    <a href="{% url 'unidades' %}" class="nav-item nav-link">UNIDADES</a>
+                    <a href="{% url 'clientes' %}" class="nav-item nav-link">CLIENTES</a>
+                    <a href="{% url 'equipoTrabajo' %}" class="nav-item nav-link">ÚNETE A NUESTRO EQUIPO</a>
+                    <div class="nav-item dropdown">
+                       
+                        
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <!--Títulos editables
+            <h1 class="text-primary mb-4">BIENVENIDOS A</h1>
+            <h1 class="text-white display-3 mb-5">CS Logistics</h1> -->
+
+            <h1 class="text-primary mb-4">
+                
+                {% block titulo %}
+
+                {% endblock %}
+                
+            </h1>
+
+            
+            <h1 class="text-white display-3 mb-5">
+
+                {% block titulo1 %}
+
+                {% endblock %}
+                
+            
+
+
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Header End -->
+
+    <!--Menú de la página de Inicio-->
+    {% block menu %}
+   
+    {% endblock %}
+
+    <!--Reservado para el botón que lleva al formulario-->
+    {% block boton %}
+   
+    {% endblock %}
+
+    <!--Reservado para el formulario-->
+    {% block formulario %}
+   
+    {% endblock %}
+
+    <!--Reservado para el listado de registrados-->
+    {% block Listado %}
+   
+    {% endblock %}
+
+    <!--Reservado para la búsqueda-->
+    {% block buscar %}
+   
+    {% endblock %}    
+
+</body>
+
+<p>
+    
+    
+    <!--<ol>
+        {% for x in todos %}
+    
+        {{x.RazonSocial}}
+        {{x.Cuit}}<br>
+
+        {{x.Patente}}
+        {{x.TipoUnidad}}<br>
+    
+        {% endfor %}
+    </ol>-->
+
+
+
+    
+</p>
+
+
+
+
+
+</html>

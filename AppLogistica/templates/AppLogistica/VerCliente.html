@@ -1,0 +1,66 @@
+{% extends "AppLogistica/Padre.html" %}
+
+{% load static %} 
+
+<!--Primer título-->
+{% block titulo %}
+
+LISTA DE
+
+{% endblock %}
+
+<!--Segundo título-->
+{% block titulo1 %}
+
+CLIENTES REGISTRADOS
+
+{% endblock %}
+
+<!--Reservado para el formulario-->
+{% block boton %}
+     <ol>  
+    <a href="{% url 'clientenuevo' %}" class="nav-item nav-link">REGISTRAR NUEVO CLIENTE</a>
+    </ol>
+{% endblock %}
+
+<!--Reservado para el listado de registrados-->
+{% block Listado %}
+
+    <ol>
+        <br>
+        {% for x in todos %}
+        RAZÓN SOCIAL: 
+        {{x.RazonSocial}} <br>
+        CUIT: 
+        {{x.Cuit}}<br>
+
+        -------------------------<br>
+    
+        {% endfor %}
+    </ol>
+   
+{% endblock %}
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Clientes</title>
+</head>
+<body>
+    <ol>
+    {% for x in todos %}
+
+    {{x.RazonSocial}}
+    {{x.CUIT}}<br>
+    {% endfor %}
+    </ol>
+
+</body>
+</html>
